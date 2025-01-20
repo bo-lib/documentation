@@ -312,8 +312,6 @@ import { ExportButtonComponent } from &quot;../export-button/export-button.compo
   templateUrl: &quot;./drilldown.component.html&quot;,
   styleUrl: &quot;./drilldown.component.css&quot;,
 })
-
-
 export class DrilldownComponent {
   /**
    * Nome do Drilldown, vai aparecer na raiz do breadcrumbs.
@@ -458,7 +456,13 @@ export class DrilldownComponent {
       this.drillDownData.items.length &#x3D;&#x3D;&#x3D; 0
     )
       return;
-    this.drillColumns &#x3D; this.drillDownData.header;
+    this.drillColumns &#x3D; this.drillDownData.header.map((column) &#x3D;&gt; {
+      return column.type &#x3D;&#x3D;&#x3D; &quot;link&quot;
+        ? { ...column, type: &quot;cellTemplate&quot; }
+        : {
+            ...column,
+          };
+    });
     this.drillItems &#x3D; this.drillDownData.items;
     this.drillIsLoading &#x3D; false;
   }
@@ -470,10 +474,6 @@ export class DrilldownComponent {
    * @autor Matheus Camargo B. da Costa
    */
   navigateDown(row: any, clickedValue: string): void {
-    if (!row || !clickedValue) {
-      console.error(&quot;Erro: Propriedade inexistente ou valor inválido&quot;);
-      return;
-    }
     this.addBreadcrumb(row, clickedValue);
     this.drillIsLoading &#x3D; true;
     this.actionLinkClicked.emit({ row, clickedValue });
@@ -514,13 +514,6 @@ export class DrilldownComponent {
         else this.getBackToRoot(this.drillDownName);
       },
     };
-
-    for (let breacrumb of this.drillBreadcrumbs) {
-      if (breacrumb.label &#x3D;&#x3D;&#x3D; breadcrumbItem.label) {
-        return;
-      }
-    }
-
     this.drillBreadcrumbs.push(breadcrumbItem);
     this.changeDetector.detectChanges();
   }
