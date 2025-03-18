@@ -743,8 +743,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="237"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:237</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="241"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:241</a></div>
                         </td>
                     </tr>
 
@@ -860,8 +860,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="276"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:276</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="287"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:287</a></div>
                         </td>
                     </tr>
 
@@ -899,8 +899,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="297"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:297</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="312"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:312</a></div>
                         </td>
                     </tr>
 
@@ -938,8 +938,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="285"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:285</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="296"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:296</a></div>
                         </td>
                     </tr>
 
@@ -977,8 +977,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="267"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:267</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="278"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:278</a></div>
                         </td>
                     </tr>
 
@@ -1085,15 +1085,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>saveFileExcel(data: any[], fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>saveFileExcel(data: any[] | null, fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="248"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:248</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="256"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:256</a></div>
                         </td>
                     </tr>
 
@@ -1119,7 +1119,7 @@
                                         <tr>
                                                 <td>data</td>
                                             <td>
-                                                        <code>any[]</code>
+                                                        <code>any[] | null</code>
                                             </td>
 
                                             <td>
@@ -1179,15 +1179,15 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>saveFilePDF(data: any[], fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+<code>saveFilePDF(data: any[] | null, fileName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="311"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:311</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="330"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/export-button/export-button.component.ts:330</a></div>
                         </td>
                     </tr>
 
@@ -1213,7 +1213,7 @@
                                         <tr>
                                                 <td>data</td>
                                             <td>
-                                                        <code>any[]</code>
+                                                        <code>any[] | null</code>
                                             </td>
 
                                             <td>
@@ -1528,8 +1528,8 @@ import {
 import * as XLSX from &quot;xlsx&quot;;
 import { saveAs } from &quot;file-saver&quot;;
 
-import jsPDF from &quot;jspdf&quot;;
-import autoTable from &quot;jspdf-autotable&quot;;
+import * as jsPDF from &#x27;jspdf&#x27;;
+import * as autoTable from &#x27;jspdf-autotable&#x27;;
 
 import {
   PoModalAction,
@@ -1644,11 +1644,11 @@ export class ExportButtonComponent {
           } else if (property &#x3D;&#x3D;&#x3D; &quot;allDataToExport&quot;) {
             if (this.currentExporting &#x3D;&#x3D;&#x3D; &quot;excel&quot;) {
               this.exportExcellAllData();
-            } else {
+            } else if(this.currentExporting &#x3D;&#x3D;&#x3D; &quot;pdf&quot;) {
               this.exportPDFAllData();
             }
           }
-        } else {          
+        } else {
           console.log(&#x60;No changes detected in ${property}&#x60;);
         }
       }
@@ -1738,6 +1738,10 @@ export class ExportButtonComponent {
    * @autor Matheus Camargo B. da Costa
    */
   exportExcellAllData(): void {
+    if (!this.allDataToExport || this.allDataToExport.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&#x27;No data available to export to Excel&#x27;);
+      return;
+    }
     this.saveFileExcel(this.allDataToExport, &quot;export&quot;);
     this.closeModal();
   }
@@ -1747,6 +1751,10 @@ export class ExportButtonComponent {
    * @autor Matheus Camargo B. da Costa
    */
   exportExcelCurrent(): void {
+    if (!this.dataToExport || this.dataToExport.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&#x27;No data available to export to Excel&#x27;);
+      return;
+    }
     this.saveFileExcel(this.dataToExport, &quot;export&quot;);
     this.closeModal();
   }
@@ -1757,8 +1765,11 @@ export class ExportButtonComponent {
    * @param fileName - Nome do arquivo.
    * @autor Matheus Camargo B. da Costa
    */
-  saveFileExcel(data: any[], fileName: string): void {
-    if(!data) return;
+  saveFileExcel(data: any[] | null, fileName: string): void {
+    if (!data || data.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&#x27;No data available to export to Excel&#x27;);
+      return;
+    }
     const worksheet: XLSX.WorkSheet &#x3D; XLSX.utils.json_to_sheet(data);
     const workbook: XLSX.WorkBook &#x3D; XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, &quot;Sheet1&quot;);
@@ -1795,6 +1806,10 @@ export class ExportButtonComponent {
    * @autor Matheus Camargo B. da Costa
    */
   exportPDFCurrent(): void {
+    if (!this.dataToExport || this.dataToExport.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&#x27;No data available to export to PDF&#x27;);
+      return;
+    }
     this.saveFilePDF(this.dataToExport, &quot;export&quot;);
     this.closeModal();
     setTimeout(() &#x3D;&gt; {
@@ -1807,6 +1822,10 @@ export class ExportButtonComponent {
    * @autor Matheus Camargo B. da Costa
    */
   exportPDFAllData(): void {
+    if (!this.allDataToExport || this.allDataToExport.length &#x3D;&#x3D;&#x3D; 0) {
+      console.error(&#x27;No data available to export to PDF&#x27;);
+      return;
+    }
     this.saveFilePDF(this.allDataToExport, &quot;export&quot;);
     this.closeModal();
     setTimeout(() &#x3D;&gt; {
@@ -1820,7 +1839,7 @@ export class ExportButtonComponent {
    * @param fileName - Nome do arquivo.
    * @autor Matheus Camargo B. da Costa
    */
-  saveFilePDF(data: any[], fileName: string): void {
+  saveFilePDF(data: any[] | null, fileName: string): void {
     if(!data) return;
     const filteredData: any &#x3D; data.map((item) &#x3D;&gt; ({
       Pedido: item.order,
@@ -1835,11 +1854,12 @@ export class ExportButtonComponent {
       Quantidade: item.sale,
       Total: item.amount,
     }));
-    const doc &#x3D; new jsPDF({ format: &quot;a3&quot;, orientation: &quot;landscape&quot; });
+    const doc &#x3D; new jsPDF.jsPDF({ format: &quot;a3&quot;, orientation: &quot;landscape&quot; });
+    // const doc &#x3D; new jsPDF({ format: &quot;a3&quot;, orientation: &quot;landscape&quot; });
     const headers &#x3D; Object.keys(filteredData[0]);
     const rows &#x3D; filteredData.map((obj: any) &#x3D;&gt; headers.map((key) &#x3D;&gt; obj[key]));
 
-    autoTable(doc, {
+    autoTable.default(doc, {
       head: [headers],
       body: rows,
       columnStyles: {

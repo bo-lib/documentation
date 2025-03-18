@@ -101,6 +101,8 @@ tsconfig.lib.prod.json
 tsconfig.spec.json</code></pre></div><h2>⚙️ Instalação</h2>
 <p>Para instalar as dependências do projeto, execute:</p>
 <p><code>npm install</code></p>
+<p><code>npm install chart.js@^4.4.7 file-saver@^2.0.5 jspdf@^2.5.2 jspdf-autotable@^3.8.4 --force</code></p>
+<p><code>npm install @backoffice/bo-lib --registry https://npm.totvs.io --force</code></p>
 <h2>🚀 Servidor de Desenvolvimento</h2>
 <p>Você irá precisar de um ambiente válido que já execute corretamente o PO-UI, caso tenha alguma dúvida em relação a instalação do PO-UI consulte a documentação oficial aqui <a href="https://po-ui.io/guides/getting-started">PO-UI</a></p>
 <p>Para visualizar em tempo real suas mudanças na lib use:</p>
@@ -112,7 +114,7 @@ tsconfig.spec.json</code></pre></div><h2>⚙️ Instalação</h2>
 <p>A publicação é feita através do CI/CD do drone após versionamento e geração de tag do repositório. Baseado na master.</p>
 <h2>🧪 Execução de Testes Unitários</h2>
 <p>Para executar os testes unitários via Karma, execute:</p>
-<p><code>ng test</code></p>
+<p><code>ng test --project=bo-lib</code></p>
 <h2>🛠️ Comandos</h2>
 <p>Para gerar um novo componente, execute:</p>
 <p><code>ng generate component components/{comonent-name} --project=bo-lib</code></p>

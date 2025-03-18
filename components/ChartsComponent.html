@@ -131,6 +131,7 @@
     </p>
     <p class="comment">
                 <code>AfterViewInit</code>
+                <code>OnChanges</code>
     </p>
 
 
@@ -197,6 +198,10 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#chart" >chart</a>
+                            </li>
+                            <li>
                                     <span class="modifier"></span>
                                 <a href="#chartCanvas" >chartCanvas</a>
                             </li>
@@ -213,7 +218,14 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#initializeChart" >initializeChart</a>
+                            </li>
+                            <li>
                                 <a href="#ngAfterViewInit" >ngAfterViewInit</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnChanges" >ngOnChanges</a>
                             </li>
                         </ul>
                     </td>
@@ -231,6 +243,9 @@
                                 <a href="#datasets" >datasets</a>
                             </li>
                             <li>
+                                <a href="#eventsChartOn" >eventsChartOn</a>
+                            </li>
+                            <li>
                                 <a href="#height" >height</a>
                             </li>
                             <li>
@@ -246,6 +261,20 @@
                     </td>
                 </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Outputs</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#eventChartClicked" >eventChartClicked</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
 
 
 
@@ -253,6 +282,24 @@
     </table>
 </section>
 
+    <section data-compodoc="block-constructor">
+    <h3 id="constructor">Construtor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor()</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="80" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:80</a></div>
+                            </td>
+                        </tr>
+
+            </tbody>
+        </table>
+</section>
 
     <section data-compodoc="block-inputs">
     <h3 id="inputs">Inputs</h3>
@@ -277,7 +324,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido em <a href="" data-line="53" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:53</a></div>
+                                    <div class="io-line">Definido em <a href="" data-line="63" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:63</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -286,6 +333,38 @@
 <b>Exemplo :</b><div><pre class="line-numbers"><code class="language-html">[
   { label: &#39;Dataset 1&#39;, data: [10, 20, 30], backgroundColor: [&#39;red&#39;, &#39;blue&#39;, &#39;yellow&#39;] }
 ]</code></pre></div></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventsChartOn"></a>
+                        <b>eventsChartOn</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Valor padrão : </i><code>false</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido em <a href="" data-line="73" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:73</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Ativa ou não o clique nos eventos do gráfico.</p>
+</div>
                     </td>
                 </tr>
             </tbody>
@@ -311,7 +390,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido em <a href="" data-line="30" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:30</a></div>
+                                    <div class="io-line">Definido em <a href="" data-line="40" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:40</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -343,7 +422,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido em <a href="" data-line="44" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:44</a></div>
+                                    <div class="io-line">Definido em <a href="" data-line="54" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:54</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -370,12 +449,12 @@
                 </tr>
                 <tr>
                     <td class="col-md-4">
-                        <i>Valor padrão : </i><code>&quot;bar&quot;</code>
+                        <i>Valor padrão : </i><code>&#x27;bar&#x27;</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido em <a href="" data-line="37" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:37</a></div>
+                                    <div class="io-line">Definido em <a href="" data-line="47" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:47</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -407,7 +486,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Definido em <a href="" data-line="23" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:23</a></div>
+                                    <div class="io-line">Definido em <a href="" data-line="33" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:33</a></div>
                             </td>
                         </tr>
                 <tr>
@@ -419,7 +498,36 @@
             </tbody>
         </table>
 </section>
+    <section data-compodoc="block-outputs">
+    <h3 id="outputs">Outputs</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="eventChartClicked"></a>
+                        <b>eventChartClicked</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>EventEmitter&lt;any&gt;</code>
 
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-2" colspan="2">
+                                    <div class="io-line">Definido em <a href="" data-line="78" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:78</a></div>
+                            </td>
+                        </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Evento de clique em um evento do gráfico.</p>
+</div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
 
 
     <section data-compodoc="block-methods">
@@ -427,6 +535,48 @@
     <h3 id="methods">
         Métodos
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeChart"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>initializeChart</b></span>
+                        <a href="#initializeChart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                        <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>initializeChart()</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Definido em <a href="" data-line="114"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:114</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método para inicializar o gráfico.
+Configura e cria o gráfico utilizando a biblioteca Chart.js.</p>
+</div>
+
+                        <div class="io-description">
+                            <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -447,8 +597,8 @@
 
                     <tr>
                         <td class="col-md-4">
-                            <div class="io-line">Definido em <a href="" data-line="64"
-                                    class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:64</a></div>
+                            <div class="io-line">Definido em <a href="" data-line="106"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:106</a></div>
                         </td>
                     </tr>
 
@@ -467,12 +617,109 @@ Configura e renderiza o gráfico utilizando a biblioteca Chart.js.</p>
             </tr>
         </tbody>
     </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnChanges"></a>
+                    <span class="name">
+                        <span ><b>ngOnChanges</b></span>
+                        <a href="#ngOnChanges"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnChanges(changes: SimpleChanges)</code>
+                </td>
+            </tr>
+
+
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-line">Definido em <a href="" data-line="88"
+                                    class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:88</a></div>
+                        </td>
+                    </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                        <div class="io-description"><p>Método chamado quando há mudanças nas propriedades vinculadas.
+Verifica se houve mudanças nos datasets e atualiza o gráfico.</p>
+</div>
+
+                            <div class="io-description">
+                                <b>Parâmetros :</b>
+                                
+                                <table class="params">
+                                    <thead>
+                                        <tr>
+                                            <td>Nome</td>
+                                                <td>Tipo</td>
+                                            <td>Opcional</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                                <td>changes</td>
+                                            <td>
+                                                        <code>SimpleChanges</code>
+                                            </td>
+
+                                            <td>
+                                                    Não
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <div class="io-description">
+                            <b>Retorna : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                        </div>
+                            <div class="io-description">
+                                
+                            </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </section>
     <section data-compodoc="block-properties">
     
     <h3 id="inputs">
         Propriedades
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="chart"></a>
+                    <span class="name">
+                            <span class="modifier">Private</span>
+                        <span ><b>chart</b></span>
+                        <a href="#chart"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Tipo : </i>    <code>Chart | undefined</code>
+
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Definido em <a href="" data-line="80" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:80</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -502,7 +749,7 @@ Configura e renderiza o gráfico utilizando a biblioteca Chart.js.</p>
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Definido em <a href="" data-line="58" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:58</a></div>
+                                <div class="io-line">Definido em <a href="" data-line="68" class="link-to-prism">projects/bo-lib/src/lib/components/charts/charts.component.ts:68</a></div>
                         </td>
                     </tr>
 
@@ -521,23 +768,33 @@ Configura e renderiza o gráfico utilizando a biblioteca Chart.js.</p>
 
 
     <div class="tab-pane fade  tab-source-code" id="source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Chart, ChartConfiguration, ChartType, registerables } from &quot;chart.js&quot;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {
+  Chart,
+  ChartConfiguration,
+  ChartType,
+  registerables,
+  ChartEvent,
+} from &#x27;chart.js&#x27;;
 import {
   Component,
   Input,
   AfterViewInit,
   ElementRef,
   ViewChild,
-} from &quot;@angular/core&quot;;
+  SimpleChanges,
+  OnChanges,
+  Output,
+  EventEmitter,
+} from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &quot;bo-charts&quot;,
+  selector: &#x27;bo-charts&#x27;,
   standalone: true,
   imports: [],
-  templateUrl: &quot;./charts.component.html&quot;,
-  styleUrls: [&quot;./charts.component.css&quot;],
+  templateUrl: &#x27;./charts.component.html&#x27;,
+  styleUrls: [&#x27;./charts.component.css&#x27;],
 })
-export class ChartsComponent implements AfterViewInit {
+export class ChartsComponent implements AfterViewInit, OnChanges {
   /**
    * Largura do gráfico em pixels.
    * @example
@@ -557,7 +814,7 @@ export class ChartsComponent implements AfterViewInit {
    * @example
    * &#x27;bar&#x27; | &#x27;line&#x27; | &#x27;doughnut&#x27; | &#x27;radar&#x27; | &#x27;polarArea&#x27; | &#x27;scatter&#x27;
    */
-  @Input() type: ChartType &#x3D; &quot;bar&quot;;
+  @Input() type: ChartType &#x3D; &#x27;bar&#x27;;
 
   /**
    * Rótulos dos eixos X ou categorias do gráfico.
@@ -578,18 +835,55 @@ export class ChartsComponent implements AfterViewInit {
   /**
    * Elemento HTML do canvas onde o gráfico será renderizado.
    */
-  @ViewChild(&quot;chartCanvas&quot;) chartCanvas!: ElementRef&lt;HTMLCanvasElement&gt;;
+  @ViewChild(&#x27;chartCanvas&#x27;) chartCanvas!: ElementRef&lt;HTMLCanvasElement&gt;;
+
+  /**
+   * Ativa ou não o clique nos eventos do gráfico.
+   */
+  @Input() eventsChartOn: boolean &#x3D; false;
+
+  /**
+   * Evento de clique em um evento do gráfico.
+   */
+  @Output() eventChartClicked: EventEmitter&lt;any&gt; &#x3D; new EventEmitter&lt;any&gt;();
+
+  private chart: Chart | undefined;
+
+  constructor() {}
+
+  /**
+   * Método chamado quando há mudanças nas propriedades vinculadas.
+   * Verifica se houve mudanças nos datasets e atualiza o gráfico.
+   */
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes[&#x27;datasets&#x27;]) {
+      const previousValue &#x3D; changes[&#x27;datasets&#x27;].previousValue;
+      const currentValue &#x3D; changes[&#x27;datasets&#x27;].currentValue;
+
+      if (JSON.stringify(previousValue) !&#x3D;&#x3D; JSON.stringify(currentValue)) {
+        if (this.chart) {
+          this.chart.destroy();
+        }
+        this.initializeChart();
+      }
+    }
+  }
 
   /**
    * Método chamado após a inicialização da view.
    * Configura e renderiza o gráfico utilizando a biblioteca Chart.js.
    */
   ngAfterViewInit(): void {
-    Chart.register(...registerables);
+    this.initializeChart();
+  }
 
-    /**
-     * Configuração do gráfico, incluindo tipo, dados e opções.
-     */
+  /**
+   * Método para inicializar o gráfico.
+   * Configura e cria o gráfico utilizando a biblioteca Chart.js.
+   */
+  private initializeChart(): void {
+    Chart.register(...registerables);
+  
     const config: ChartConfiguration &#x3D; {
       type: this.type,
       data: {
@@ -601,16 +895,32 @@ export class ChartsComponent implements AfterViewInit {
         maintainAspectRatio: false,
       },
     };
-
-    /**
-     * Obtém o contexto 2D do canvas e cria o gráfico.
-     * Exibe um erro no console se o contexto não for encontrado.
-     */
-    const ctx &#x3D; this.chartCanvas.nativeElement.getContext(&quot;2d&quot;);
-    if (ctx) {
-      new Chart(ctx, config);
+  
+    if (this.eventsChartOn) {
+      config.options!.onClick &#x3D; (event: ChartEvent, elements: any[]) &#x3D;&gt; {
+        if (elements.length &gt; 0) {
+          const index &#x3D; elements[0].index;
+          const datasetIndex &#x3D; elements[0].datasetIndex;
+          const label &#x3D; this.chart?.data.labels?.[index] || &#x27;&#x27;;
+          const value &#x3D; this.chart?.data.datasets[datasetIndex].data[index] as number;
+  
+          this.eventChartClicked.emit({ label, value });
+        }
+      };
+    }
+  
+    // Verifica se o chartCanvas está definido antes de acessar o nativeElement
+    if (this.chartCanvas) {
+      setTimeout(() &#x3D;&gt; {
+        const ctx &#x3D; this.chartCanvas.nativeElement.getContext(&#x27;2d&#x27;);
+        if (ctx) {
+          this.chart &#x3D; new Chart(ctx, config);
+        } else {
+          console.warn(&#x27;Warn: Não foi possível obter o contexto do canvas.&#x27;);
+        }
+      });
     } else {
-      console.error(&quot;Erro: Não foi possível obter o contexto do canvas.&quot;);
+      console.warn(&#x27;Warn: Aguardando o canvas ser definido.&#x27;);
     }
   }
 }
